@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Berkay Bilgin | Elektrik-Elektronik Mühendisi</title>
+  <meta name="description"
+    content="Berkay Bilgin – Elektrik-Elektronik Mühendisi, Bilgisayar Mühendisliği ÇAP ve Sakarya Üniversitesi Elektrik Mühendisliği yüksek lisans öğrencisi. Gömülü sistemler, SCADA/PLC, bilgisayarlı görü, otonom araçlar ve enerji hasadı projeleri." />
+  <meta name="author" content="Berkay Bilgin" />
+  <meta name="keywords"
+    content="Berkay Bilgin, Elektrik Elektronik Mühendisi, Bilgisayar Mühendisliği, Gömülü Sistemler, ESP32, SCADA, PLC, TIA Portal, OpenCV, React Native, TEKNOFEST, Enerji Hasadı, Portfolyo" />
+  <meta name="theme-color" content="#05070f" />
+
+  <!-- Domain adresi -->
+  <link rel="canonical" href="https://berkaybilgin.tr/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Berkay Bilgin | Mühendis Portfolyosu" />
+  <meta property="og:description"
+    content="Gömülü sistemler, endüstriyel otomasyon, bilgisayarlı görü, otonom araçlar ve enerji hasadı projeleri." />
+  <meta property="og:image" content="https://berkaybilgin.tr/assets/img/project-oven.jpg" />
+  <meta property="og:url" content="https://berkaybilgin.tr/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Scroll ilerleme çubuğu -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Arka plan efektleri -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+  <div class="mouse-glow" id="mouseGlow" aria-hidden="true"></div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar__inner container" aria-label="Ana menü">
+      <a href="#hero" class="logo" id="navLogo" aria-label="Ana sayfa">
+        <span class="logo__name">Berkay Bilgin</span>
+        <span class="logo__tag mono">Müh.</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active" id="navHome">Giriş</a></li>
+        <li><a href="#about" class="nav-link" id="navAbout">Hakkımda</a></li>
+        <li><a href="#resume" class="nav-link" id="navResume">Özgeçmiş</a></li>
+        <li><a href="#projects" class="nav-link" id="navProjects">Projeler</a></li>
+        <li><a href="#code-hub" class="nav-link" id="navCodeHub">Kod Arşivi</a></li>
+        <li><a href="#glossary" class="nav-link" id="navGlossary">Sözlük</a></li>
+        <li><a href="#certificates" class="nav-link" id="navCertificates">Sertifikalar</a></li>
+        <li><a href="#contact" class="nav-link" id="navContact">İletişim</a></li>
+      </ul>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="hero">
+      <div class="container hero__grid">
+        <!-- Sol: Kimlik ve Tanıtım -->
+        <div class="hero__content">
+          <div class="hero__badge reveal">
+            <span class="status-dot"></span>
+            <span>Mühendislik &amp; Ar-Ge Çalışmaları · Sakarya &amp; Balıkesir</span>
+          </div>
+
+          <a href="#glossary" class="hero__daily-pill reveal" id="heroDailyPill" title="Bugünün Mühendislik Terimi">
+            <span class="hero__daily-pill-tag">⚡ Günün Terimi</span>
+            <span class="hero__daily-pill-title" id="heroDailyTitle">Yükleniyor...</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg>
+          </a>
+
+          <h1 class="hero__name reveal">
+            Merhaba, ben <br />
+            <span class="gradient-text">Berkay Bilgin</span>
+          </h1>
+
+          <p class="hero__role reveal">
+            Elektrik-Elektronik Mühendisi
+            <span class="hero__dot">·</span>
+            Bilgisayar Müh. (ÇAP)
+            <span class="hero__dot">·</span>
+            Yüksek Lisans
+          </p>
+
+          <p class="hero__bio reveal">
+            Donanım ile yazılımın kesiştiği alanda; <strong>gömülü sistemler (ESP32)</strong>,
+            <strong>endüstriyel otomasyon (PLC &amp; SCADA)</strong>, <strong>bilgisayarlı görü (OpenCV)</strong>
+            ve <strong>enerji hasadı</strong> üzerine çalışıyorum. Rize-Artvin Havalimanı ve İl Özel İdaresi'ndeki
+            saha tecrübelerimi akademik vizyonumla birleştiriyorum.
+          </p>
+
+          <div class="hero__actions reveal">
+            <a href="#projects" class="btn btn--primary" id="heroProjectsBtn">
+              Projelerimi İncele
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn--ghost" id="heroContactBtn">
+              İletişime Geç
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 6l-10 7L2 6" />
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero__socials reveal">
+            <a href="https://github.com/BERKAY081014" target="_blank" rel="noopener noreferrer"
+              class="hero__social-chip" id="heroGithub">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+              </svg>
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/berkay-bilgin-bb7b05281/" target="_blank" rel="noopener noreferrer"
+              class="hero__social-chip" id="heroLinkedin">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M20.45 20.45h-3.56v-5.57c0-1.330-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.instagram.com/berkyblgn?utm_source=qr&amp;stkn=eXBpbHNrY2lreW54" target="_blank"
+              rel="noopener noreferrer" class="hero__social-chip" id="heroInstagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4.2" />
+                <circle cx="17.6" cy="6.4" r="1" fill="currentColor" stroke="none" />
+              </svg>
+              <span>Instagram</span>
+            </a>
+            <a href="mailto:kgberkay10@gmail.com" class="hero__social-chip" id="heroMail">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="M22 6l-10 7L2 6" />
+              </svg>
+              <span>E-posta</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Sağ: Gerçek Profil Fotoğrafı (Sade & Net) -->
+        <div class="hero__visual reveal">
+          <div class="hero__photo-card">
+            <div class="hero__photo-inner">
+              <img src="assets/img/profil.jpg" alt="Berkay Bilgin – Elektrik-Elektronik Mühendisi"
+                class="hero__photo-img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HAKKIMDA ================= -->
+    <section class="section about" id="about">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__tag">Biyografi &amp; Vizyon</span>
+          <h2 class="section__title">Mühendislik <span class="gradient-text">Yolculuğum</span></h2>
+        </header>
+
+        <div class="about__grid">
+          <!-- Mühendislik Hızlı Bakış Kartı -->
+          <aside class="profile-card reveal">
+            <div class="profile-card__status">
+              <span class="status-dot"></span>
+              <span>Araştırmacı &amp; Mühendis</span>
+            </div>
+
+            <div class="profile-card__head">
+              <div class="profile-card__icon-badge">⚡</div>
+              <h3 class="profile-card__name">Berkay Bilgin</h3>
+              <p class="profile-card__role">Elektrik-Elektronik &amp; Bilgisayar Müh. (ÇAP)</p>
+            </div>
+
+            <div class="profile-card__divider"></div>
+
+            <ul class="profile-card__info">
+              <li>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <span>Sakarya &amp; Balıkesir, TR</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 10L12 5 2 10l10 5 10-5z" />
+                  <path d="M6 12v5c3 2 9 2 12 0v-5" />
+                </svg>
+                <span>Sakarya Üni. · Yüksek Lisans</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="5" y="5" width="14" height="14" rx="2" />
+                  <rect x="9" y="9" width="6" height="6" />
+                  <path d="M9 1v4M15 1v4M9 19v4M15 19v4M1 9h4M1 15h4M19 9h4M19 15h4" />
+                </svg>
+                <span>Gömülü Sistemler &amp; SCADA</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="M22 6l-10 7L2 6" />
+                </svg>
+                <a href="mailto:kgberkay10@gmail.com">kgberkay10@gmail.com</a>
+              </li>
+            </ul>
+
+            <div class="profile-card__chips">
+              <span>ESP32</span>
+              <span>PLC / TIA</span>
+              <span>OpenCV</span>
+              <span>React Native</span>
+              <span>Python / C++</span>
+            </div>
+
+            <!-- CV butonu: assets/Berkay-Bilgin-CV.pdf dosyası eklenirse otomatik görünür -->
+            <a href="assets/Berkay-Bilgin-CV.pdf" class="btn btn--ghost btn--full btn--sm is-hidden" id="cvBtn"
+              download>
+              CV'mi İndir
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 3v12M7 10l5 5 5-5M5 21h14" />
+              </svg>
+            </a>
+          </aside>
+
+          <div class="about__main">
+            <div class="about__text reveal">
+              <p>
+                <strong>2002 Artvin</strong> doğumluyum. <strong>Bandırma Onyedi Eylül Üniversitesi</strong>
+                Elektrik-Elektronik Mühendisliği'nden mezun oldum; aynı üniversitede
+                <strong>Bilgisayar Mühendisliği Çift Anadal (ÇAP)</strong> programına devam ediyorum.
+                Şu anda <strong>Sakarya Üniversitesi</strong>'nde Elektrik Mühendisliği yüksek lisans öğrencisiyim.
+              </p>
+              <p>
+                Gömülü sistemler, endüstriyel otomasyon (SCADA, PLC), bilgisayarlı görü, otonom araçlar ve
+                enerji hasadı alanlarında aktif olarak çalışıyorum. Ödüllü projelerde
+                <strong>takım kaptanlığı</strong> yaptım.
+              </p>
+              <p>
+                <strong>Rize-Artvin Havalimanı</strong>'nda SCADA ve elektrik altyapısı,
+                <strong>Artvin İl Özel İdaresi</strong>'nde ise teknik çizim ve kamu binalarının elektrik
+                sistemlerinin denetimi üzerine yaptığım stajlarla saha tecrübesi edindim. Bu tecrübeyi akademik
+                vizyonla birleştirerek donanım ve yazılımda yenilikçi çözümler üretmeyi amaçlıyorum.
+              </p>
+            </div>
+
+            <div class="stats reveal">
+              <div class="stat">
+                <span class="stat__num" data-count="2">0</span>
+                <span class="stat__label">Saha Stajı</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num" data-count="6" data-suffix="+">0</span>
+                <span class="stat__label">Proje</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num" data-count="3">0</span>
+                <span class="stat__label">Ödül &amp; Derece</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num" data-count="18" data-suffix="+">0</span>
+                <span class="stat__label">Sertifika &amp; Belge</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Teknik Yetenekler -->
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <span class="skill-card__icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+              </svg>
+            </span>
+            <h3>Yazılım Dilleri</h3>
+            <div class="chips"><span>Python</span><span>C</span><span>C++</span><span>React
+                Native</span><span>MATLAB</span></div>
+          </article>
+          <article class="skill-card reveal">
+            <span class="skill-card__icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="5" y="5" width="14" height="14" rx="2" />
+                <rect x="9" y="9" width="6" height="6" />
+                <path d="M9 1v4M15 1v4M9 19v4M15 19v4M1 9h4M1 15h4M19 9h4M19 15h4" />
+              </svg>
+            </span>
+            <h3>Gömülü Sistemler &amp; Donanım</h3>
+            <div class="chips"><span>ESP32</span><span>Arduino</span><span>Mikrodenetleyici Mimarileri</span><span>MQTT
+                · IoT</span></div>
+          </article>
+          <article class="skill-card reveal">
+            <span class="skill-card__icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                <path
+                  d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+              </svg>
+            </span>
+            <h3>Otomasyon &amp; Endüstriyel Sistemler</h3>
+            <div class="chips"><span>PLC</span><span>TIA Portal
+                v18</span><span>S7-PLCSIM</span><span>SCADA</span><span>Factory I/O</span></div>
+          </article>
+          <article class="skill-card reveal">
+            <span class="skill-card__icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </span>
+            <h3>Görüntü İşleme &amp; Makine Öğrenmesi</h3>
+            <div class="chips">
+              <span>OpenCV</span><span>Scikit-image</span><span>CNN</span><span>MLP</span><span>ORB</span><span>RANSAC</span><span>MediaPipe</span>
+            </div>
+          </article>
+          <article class="skill-card reveal">
+            <span class="skill-card__icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                <path d="M2 2l7.586 7.586" />
+                <circle cx="11" cy="11" r="2" />
+              </svg>
+            </span>
+            <h3>Tasarım &amp; Çizim</h3>
+            <div class="chips"><span>AutoCAD</span><span>Proteus</span><span>MATLAB / Simulink</span></div>
+          </article>
+          <article class="skill-card reveal">
+            <span class="skill-card__icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <path
+                  d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+            </span>
+            <h3>Diller</h3>
+            <ul class="lang-list">
+              <li><span>Türkçe <small>Ana Dil</small></span><span class="dots"
+                  data-level="5"><i></i><i></i><i></i><i></i><i></i></span></li>
+              <li><span>İngilizce <small>A2–B1</small></span><span class="dots"
+                  data-level="2"><i></i><i></i><i></i><i></i><i></i></span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ÖZGEÇMİŞ ================= -->
+    <section class="section resume" id="resume">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__tag">Kariyer &amp; Eğitim</span>
+          <h2 class="section__title">Deneyim &amp; <span class="gradient-text">Eğitim</span></h2>
+        </header>
+
+        <div class="resume__grid">
+          <!-- Deneyim -->
+          <div class="resume__col">
+            <h3 class="resume__heading reveal">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" />
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+              </svg>
+              Deneyim
+            </h3>
+            <div class="timeline">
+              <div class="timeline__item reveal">
+                <span class="timeline__dot"></span>
+                <span class="timeline__date mono">07/2025 – 08/2025 · Rize</span>
+                <h4>Stajyer</h4>
+                <p class="timeline__org">Rize-Artvin Havalimanı</p>
+                <p class="timeline__desc">
+                  SCADA sistemleri, PAPI (Hassas Yaklaşma Yörünge Belirleyici) ve YG/AG elektrik altyapısının
+                  operasyonel süreçlerinde görev aldım. Elektrik motorlarının periyodik ve kestirimci bakım
+                  planlamasına, iş emirlerinin oluşturulmasına, yedek parça yönetimine ve enerji sürekliliğini
+                  artırma çalışmalarına destek verdim.
+                </p>
+                <div class="chips chips--sm"><span>SCADA</span><span>PAPI</span><span>YG/AG</span><span>Kestirimci
+                    Bakım</span></div>
+              </div>
+
+              <div class="timeline__item reveal">
+                <span class="timeline__dot"></span>
+                <span class="timeline__date mono">07/2024 – 08/2024 · Artvin</span>
+                <h4>Stajyer</h4>
+                <p class="timeline__org">Artvin İl Özel İdaresi</p>
+                <p class="timeline__desc">
+                  AutoCAD üzerinden teknik çizimler gerçekleştirdim. Çeşitli devlet kurumlarının yangın alarm
+                  sistemleri, kamera altyapıları ve elektrik sistemlerinin denetleme süreçlerinde aktif olarak
+                  görev aldım.
+                </p>
+                <div class="chips chips--sm"><span>AutoCAD</span><span>Yangın Alarm</span><span>Kamera
+                    Altyapısı</span><span>Elektrik Denetimi</span></div>
+              </div>
+
+              <div class="timeline__item reveal">
+                <span class="timeline__dot"></span>
+                <span class="timeline__date mono">01/2026 – 02/2026</span>
+                <h4>Milli Teknoloji Uzmanlık Programı · Katılımcı</h4>
+                <p class="timeline__org">Milli Teknoloji Akademisi</p>
+                <p class="timeline__desc">
+                  Yapay zekâ, çip tasarımı ve otonom sürüş teknolojileri alanlarında uzmanlık eğitimi almak üzere,
+                  Türkiye'nin önde gelen teknoloji şirketlerinin desteklediği programa seçildim.
+                </p>
+              </div>
+
+              <div class="timeline__item reveal">
+                <span class="timeline__dot"></span>
+                <span class="timeline__date mono">01/2023 – 01/2025 · Bandırma</span>
+                <h4>Teknik Ekip</h4>
+                <p class="timeline__org">IEEE BANÜ</p>
+                <p class="timeline__desc">
+                  Öğrenci topluluğunda birçok pozisyonda yer alarak Akıllı Ev Sistemleri ve Tarımsal Kara Aracı
+                  gibi projelerde görev yaptım.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Eğitim -->
+          <div class="resume__col">
+            <h3 class="resume__heading reveal">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10L12 5 2 10l10 5 10-5z" />
+                <path d="M6 12v5c3 2 9 2 12 0v-5" />
+              </svg>
+              Eğitim
+            </h3>
+            <div class="timeline">
+              <div class="timeline__item reveal">
+                <span class="timeline__dot timeline__dot--live"></span>
+                <span class="timeline__date mono">09/2026 – Devam ediyor · Sakarya</span>
+                <h4>Elektrik Mühendisliği · Yüksek Lisans</h4>
+                <p class="timeline__org">Sakarya Üniversitesi</p>
+              </div>
+
+              <div class="timeline__item reveal">
+                <span class="timeline__dot timeline__dot--live"></span>
+                <span class="timeline__date mono">09/2023 – Devam ediyor · Bandırma</span>
+                <h4>Bilgisayar Mühendisliği · Çift Anadal (ÇAP)</h4>
+                <p class="timeline__org">Bandırma Onyedi Eylül Üniversitesi</p>
+                <span class="gpa mono">GNO 2.61 / 4.00</span>
+              </div>
+
+              <div class="timeline__item reveal">
+                <span class="timeline__dot"></span>
+                <span class="timeline__date mono">09/2022 – 06/2026 · Bandırma</span>
+                <h4>Elektrik-Elektronik Mühendisliği · Lisans</h4>
+                <p class="timeline__org">Bandırma Onyedi Eylül Üniversitesi</p>
+                <span class="gpa mono">GNO 3.35 / 4.00</span>
+                <span class="badge badge--success">Mezun</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJELER ================= -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__tag">Portfolyo</span>
+          <h2 class="section__title">Öne Çıkan <span class="gradient-text">Projelerim</span></h2>
+          <p class="section__subtitle">Gömülü sistemlerden otomasyona, bilgisayarlı görü ve yapay zekâdan güç
+            elektroniğine uzanan çalışmalarım.</p>
+        </header>
+
+        <div class="projects__grid">
+          <!-- Proje 1: ESP32 Fırın -->
+          <article class="project-card reveal" id="project1">
+            <div class="project-card__media">
+              <img src="assets/img/project-oven.jpg" alt="Akıllı Modüler Fırın Kontrol Sistemi" loading="lazy" />
+              <span class="project-card__num">IoT &amp; Donanım</span>
+              <span class="project-card__badge">Bitirme Tezi</span>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__date mono">09/2025 – 05/2026</span>
+              <h3 class="project-card__title">Akıllı Modüler Fırın Kontrol Sistemi</h3>
+              <p class="project-card__desc">
+                IoT tabanlı modüler fırın kontrol ünitesi. ESP32 mikrodenetleyici mimarisi, GLCD ekran, PT100
+                sıcaklık sensörü ve röle programlaması. MQTT protokolü üzerinden React Native mobil uygulama ile
+                uzaktan gerçek zamanlı telemetri izleme ve güvenli kontrol.
+              </p>
+              <ul class="tech-list">
+                <li>ESP32</li>
+                <li>React Native</li>
+                <li>MQTT</li>
+                <li>PT100</li>
+                <li>C++</li>
+              </ul>
+              <div class="project-card__footer">
+                <a href="https://github.com/BERKAY081014/esp32-akilli-modular-firin" target="_blank" rel="noopener noreferrer"
+                  class="project-card__gh-btn">
+                  <span>GitHub'da İncele</span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proje 2: Siemens PLC -->
+          <article class="project-card reveal" id="project2">
+            <div class="project-card__media">
+              <img src="assets/img/project-plc.jpg" alt="Endüstriyel Isıtma ve Soğutma Hattı Simülasyonu"
+                loading="lazy" />
+              <span class="project-card__num">Endüstriyel Otomasyon</span>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__date mono">Otomasyon &amp; SCADA</span>
+              <h3 class="project-card__title">Siemens PLC ile Isıtma &amp; Soğutma Hattı</h3>
+              <p class="project-card__desc">
+                Siemens TIA Portal v18 ile programlanan S7-1200 PLC'nin, Factory I/O ortamında 3 boyutlu
+                modellenen ısıtma-soğutma konveyör hattını kontrol ettiği, S7-PLCSIM entegrasyonlu
+                gerçeğe yakın endüstriyel otomasyon senaryosu.
+              </p>
+              <ul class="tech-list">
+                <li>Siemens TIA Portal v18</li>
+                <li>Factory I/O</li>
+                <li>S7-PLCSIM</li>
+                <li>SCADA</li>
+              </ul>
+              <div class="project-card__footer">
+                <a href="https://github.com/BERKAY081014/siemens-plc-heating-cooling-line" target="_blank" rel="noopener noreferrer"
+                  class="project-card__gh-btn">
+                  <span>GitHub'da İncele</span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proje 3: MediaPipe Head-Tracking -->
+          <article class="project-card reveal" id="project3">
+            <div class="project-card__media">
+              <img src="assets/img/project-vision.jpg" alt="Head-Tracking 3D Simülasyon ve Bilgisayarlı Görü"
+                loading="lazy" />
+              <span class="project-card__num">Bilgisayarlı Görü</span>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__date mono">Computer Vision</span>
+              <h3 class="project-card__title">MediaPipe ile Head-Tracking 3D Simülasyonu</h3>
+              <p class="project-card__desc">
+                MediaPipe yüz işaret noktaları (Face Mesh) algoritması ile kullanıcının baş pozisyonunu ve
+                bakış açısını web kamera üzerinden gerçek zamanlı takip ederek ekranda paralaks etkili,
+                doğal derinlik hissi veren dinamik 3D simülasyon ortamı.
+              </p>
+              <ul class="tech-list">
+                <li>Python</li>
+                <li>OpenCV</li>
+                <li>MediaPipe</li>
+                <li>Face Mesh</li>
+              </ul>
+              <div class="project-card__footer">
+                <a href="https://github.com/BERKAY081014/mediapipe-head-tracking-3d" target="_blank" rel="noopener noreferrer"
+                  class="project-card__gh-btn">
+                  <span>GitHub'da İncele</span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proje 4: MATLAB DC-DC Boost Converter -->
+          <article class="project-card reveal" id="project4">
+            <div class="project-card__media">
+              <img src="assets/img/project-boost.jpg" alt="DC-DC Boost Konvertör Tasarımı ve Analizi" loading="lazy" />
+              <span class="project-card__num">Güç Elektroniği</span>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__date mono">Simülasyon &amp; Modelleme</span>
+              <h3 class="project-card__title">MATLAB / Simulink ile DC-DC Boost Konvertör</h3>
+              <p class="project-card__desc">
+                Güç elektroniği sistemleri için MATLAB/Simulink ortamında modellenen DC-DC yükseltici (Boost)
+                konvertör devresi. Yüksek verimli PWM anahtarlama analizi, endüktans/kapasitans optimizasyonu ve
+                kapalı çevrim gerilim regülasyon simülasyonu.
+              </p>
+              <ul class="tech-list">
+                <li>MATLAB</li>
+                <li>Simulink</li>
+                <li>PWM Kontrol</li>
+                <li>Güç Elektroniği</li>
+              </ul>
+              <div class="project-card__footer">
+                <a href="https://github.com/BERKAY081014/matlab-dcdc-boost-converter" target="_blank" rel="noopener noreferrer"
+                  class="project-card__gh-btn">
+                  <span>GitHub'da İncele</span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proje 5: CNN Görüntü Sınıflandırma -->
+          <article class="project-card reveal" id="project5">
+            <div class="project-card__media">
+              <img src="assets/img/project-cnn.jpg" alt="CNN Tabanlı Derin Öğrenme Görüntü Sınıflandırma Modeli"
+                loading="lazy" />
+              <span class="project-card__num">Derin Öğrenme &amp; AI</span>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__date mono">Deep Learning</span>
+              <h3 class="project-card__title">CNN Tabanlı Görüntü Sınıflandırma Modeli</h3>
+              <p class="project-card__desc">
+                Evrişimli Sinir Ağları (CNN) mimarisiyle geliştirilen kedi-köpek ve görsel veri sınıflandırma modeli.
+                Konvolüsyon katmanları, MaxPool, Dropout ve veri artırma (data augmentation) ile aşırı öğrenme
+                (overfitting) engellenerek yüksek doğruluk oranı elde edildi.
+              </p>
+              <ul class="tech-list">
+                <li>Python</li>
+                <li>TensorFlow</li>
+                <li>Keras</li>
+                <li>CNN</li>
+                <li>Scikit-learn</li>
+              </ul>
+              <div class="project-card__footer">
+                <a href="https://github.com/BERKAY081014/cnn-image-classification-tf" target="_blank" rel="noopener noreferrer"
+                  class="project-card__gh-btn">
+                  <span>GitHub'da İncele</span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proje 6: OpenCV ORB / RANSAC Image Stitching -->
+          <article class="project-card reveal" id="project6">
+            <div class="project-card__media">
+              <img src="assets/img/project-stitching.jpg" alt="OpenCV ile Panoramik Görüntü Birleştirme"
+                loading="lazy" />
+              <span class="project-card__num">Görüntü İşleme</span>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__date mono">Image Stitching</span>
+              <h3 class="project-card__title">OpenCV (ORB &amp; RANSAC) ile Görüntü Birleştirme</h3>
+              <p class="project-card__desc">
+                Farklı açılardan çekilen fotoğraflardan ORB öznitelik çıkarımı, RANSAC eşleştirme algoritması ve
+                homografi matrisi yöntemleriyle perspektif bozulması olmadan kusursuz panoramik görüntüler
+                oluşturan ileri seviye görüntü işleme algoritması.
+              </p>
+              <ul class="tech-list">
+                <li>OpenCV</li>
+                <li>Python</li>
+                <li>ORB</li>
+                <li>RANSAC</li>
+                <li>Homografi</li>
+              </ul>
+              <div class="project-card__footer">
+                <a href="https://github.com/BERKAY081014/opencv-orb-ransac-stitching" target="_blank" rel="noopener noreferrer"
+                  class="project-card__gh-btn">
+                  <span>GitHub'da İncele</span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proje 7: TEKNOFEST UGV -->
+          <article class="project-card reveal" id="project7">
+            <div class="project-card__media">
+              <img src="assets/img/project-ugv.jpg" alt="TEKNOFEST Tarımsal İnsansız Kara Aracı" loading="lazy" />
+              <span class="project-card__num">Otonom Sistemler</span>
+              <span class="project-card__badge">Takım Kaptanı</span>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__date mono">10/2024 – 01/2025</span>
+              <h3 class="project-card__title">TEKNOFEST – Tarımsal İnsansız Kara Aracı</h3>
+              <p class="project-card__desc">
+                Tarımsal arazilerde otonom seyrüsefer ve veri toplama amacıyla geliştirilen İKA projesinde
+                takım kaptanlığı ve gömülü yazılım mimarisi sorumluluğu üstlendim. (TİKA kategorisinin yarışmadan
+                kaldırılmasıyla proje rafa kaldırılmıştır.)
+              </p>
+              <ul class="tech-list">
+                <li>Gömülü Sistemler</li>
+                <li>Otonom Sürüş</li>
+                <li>Mikrodenetleyici</li>
+                <li>Sensör Füzyonu</li>
+              </ul>
+              <div class="project-card__footer">
+                <a href="https://github.com/BERKAY081014/teknofest-tarimsal-ika-navigation" target="_blank" rel="noopener noreferrer"
+                  class="project-card__gh-btn">
+                  <span>GitHub'da İncele</span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proje 8: Stepergy Enerji Hasadı -->
+          <article class="project-card reveal" id="project8">
+            <div class="project-card__media">
+              <img src="assets/img/project-energy.jpg" alt="4B-SE Takımı – Stepergy Enerji Hasadı" loading="lazy" />
+              <span class="project-card__num">Yenilenebilir Enerji</span>
+              <span class="project-card__badge">Ödüllü Ar-Ge</span>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__date mono">12/2024 – 06/2026</span>
+              <h3 class="project-card__title">4B-SE Takımı – Stepergy Enerji Hasadı</h3>
+              <p class="project-card__desc">
+                GMKA Fikri Maratonu 3.'lüğü ve GSÜ Yeni Girişimcilik Finalistliği kazanan; yaya trafiği ve
+                mekanik titreşimlerden enerji hasat ederek sokak aydınlatmalarını ve mama otomatlarını
+                şebekeden bağımsız besleyen yenilikçi sürdürülebilir enerji sistemi.
+              </p>
+              <ul class="tech-list">
+                <li>Enerji Hasadı</li>
+                <li>Akıllı Şehir</li>
+                <li>Mekanik Dönüşüm</li>
+                <li>Ar-Ge</li>
+              </ul>
+              <div class="project-card__footer">
+                <a href="https://github.com/BERKAY081014/stepergy-kinetic-energy-harvester" target="_blank" rel="noopener noreferrer"
+                  class="project-card__gh-btn">
+                  <span>GitHub'da İncele</span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects__cta reveal">
+          <a href="#code-hub" class="btn btn--outline" id="viewCodeHubBtn">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            Projelerin Kaynak Kodlarını İncele &amp; Kopyala
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJE KAYNAK KODLARI & GITHUB ARŞİVİ ================= -->
+    <section class="section code-hub" id="code-hub">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__tag">Açık Kaynak &amp; GitHub</span>
+          <h2 class="section__title">Projelerimin <span class="gradient-text">Kaynak Kodları</span></h2>
+          <p class="section__subtitle">GitHub profilime yüklenmeye hazır tüm mühendislik projelerim. Soldaki listeden dilediğiniz projeyi seçerek kaynak kodlarını inceleyebilir, panoya kopyalayabilir veya terminal komutlarıyla doğrudan GitHub reponuza yükleyebilirsiniz.</p>
+        </header>
+
+        <div class="code-hub__wrapper reveal">
+          <!-- SOL SÜTUN: PROJE ADLARI LİSTESİ -->
+          <aside class="code-hub__sidebar" aria-label="Proje Kaynak Kod Listesi">
+            <div class="code-hub__sidebar-header">
+              <span class="code-hub__sidebar-title">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                Projelerim (8)
+              </span>
+              <span class="code-hub__sidebar-badge mono">GitHub Ready</span>
+            </div>
+
+            <nav class="code-hub__nav" id="codeHubNav" aria-label="Proje Seçimi">
+              <button type="button" class="code-hub__tab active" data-project="firin">
+                <span class="code-hub__tab-icon">🔥</span>
+                <span class="code-hub__tab-info">
+                  <span class="code-hub__tab-name">Akıllı Modüler Fırın Kontrolü</span>
+                  <span class="code-hub__tab-meta mono">ESP32 · C++ · MQTT</span>
+                </span>
+                <span class="code-hub__tab-arrow">→</span>
+              </button>
+
+              <button type="button" class="code-hub__tab" data-project="plc">
+                <span class="code-hub__tab-icon">⚙️</span>
+                <span class="code-hub__tab-info">
+                  <span class="code-hub__tab-name">Siemens PLC Isıtma &amp; Soğutma</span>
+                  <span class="code-hub__tab-meta mono">S7-1200 · SCL · TIA</span>
+                </span>
+                <span class="code-hub__tab-arrow">→</span>
+              </button>
+
+              <button type="button" class="code-hub__tab" data-project="vision">
+                <span class="code-hub__tab-icon">👁️</span>
+                <span class="code-hub__tab-info">
+                  <span class="code-hub__tab-name">MediaPipe Head-Tracking 3D</span>
+                  <span class="code-hub__tab-meta mono">Python · OpenCV · 3D</span>
+                </span>
+                <span class="code-hub__tab-arrow">→</span>
+              </button>
+
+              <button type="button" class="code-hub__tab" data-project="boost">
+                <span class="code-hub__tab-icon">⚡</span>
+                <span class="code-hub__tab-info">
+                  <span class="code-hub__tab-name">DC-DC Boost Konvertör</span>
+                  <span class="code-hub__tab-meta mono">MATLAB · Simulink · Bode</span>
+                </span>
+                <span class="code-hub__tab-arrow">→</span>
+              </button>
+
+              <button type="button" class="code-hub__tab" data-project="cnn">
+                <span class="code-hub__tab-icon">🧠</span>
+                <span class="code-hub__tab-info">
+                  <span class="code-hub__tab-name">CNN Görüntü Sınıflandırma</span>
+                  <span class="code-hub__tab-meta mono">TensorFlow · Keras · AI</span>
+                </span>
+                <span class="code-hub__tab-arrow">→</span>
+              </button>
+
+              <button type="button" class="code-hub__tab" data-project="stitching">
+                <span class="code-hub__tab-icon">🖼️</span>
+                <span class="code-hub__tab-info">
+                  <span class="code-hub__tab-name">OpenCV (ORB &amp; RANSAC) Stitching</span>
+                  <span class="code-hub__tab-meta mono">Python · Homografi</span>
+                </span>
+                <span class="code-hub__tab-arrow">→</span>
+              </button>
+
+              <button type="button" class="code-hub__tab" data-project="ugv">
+                <span class="code-hub__tab-icon">🚜</span>
+                <span class="code-hub__tab-info">
+                  <span class="code-hub__tab-name">TEKNOFEST Tarımsal İKA</span>
+                  <span class="code-hub__tab-meta mono">C++ · GPS · Otonom</span>
+                </span>
+                <span class="code-hub__tab-arrow">→</span>
+              </button>
+
+              <button type="button" class="code-hub__tab" data-project="energy">
+                <span class="code-hub__tab-icon">🌱</span>
+                <span class="code-hub__tab-info">
+                  <span class="code-hub__tab-name">4B-SE Stepergy Enerji Hasadı</span>
+                  <span class="code-hub__tab-meta mono">C++ · INA219 · Telemetri</span>
+                </span>
+                <span class="code-hub__tab-arrow">→</span>
+              </button>
+            </nav>
+
+            <div class="code-hub__sidebar-footer">
+              <a href="https://github.com/BERKAY081014" target="_blank" rel="noopener noreferrer" class="code-hub__gh-profile-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+                <span>github.com/BERKAY081014</span>
+              </a>
+            </div>
+          </aside>
+
+          <!-- SAĞ SÜTUN: KOD GÖRÜNTÜLEYİCİ & TERMINAL -->
+          <div class="code-hub__viewer">
+            <!-- IDE / Terminal Başlık Çubuğu -->
+            <div class="code-hub__topbar">
+              <div class="code-hub__dots" aria-hidden="true">
+                <span class="dot dot--red"></span>
+                <span class="dot dot--yellow"></span>
+                <span class="dot dot--green"></span>
+              </div>
+              <div class="code-hub__file-tab">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
+                <span id="activeFileName" class="mono">main.cpp</span>
+                <span id="activeLanguageBadge" class="code-hub__lang-badge">C++ / ESP32</span>
+              </div>
+              <div class="code-hub__topbar-actions">
+                <button type="button" class="code-hub__action-btn" id="copyCodeBtn" aria-label="Kodu Kopyala">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  <span id="copyBtnText">Kodu Kopyala</span>
+                </button>
+                <a href="https://github.com/BERKAY081014/esp32-akilli-modular-firin" target="_blank" rel="noopener noreferrer" class="code-hub__action-btn code-hub__action-btn--primary" id="openNewRepoBtn">
+                  <span>GitHub Deposuna Git</span>
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Proje Başlık ve Bilgi Şeridi -->
+            <div class="code-hub__info-bar">
+              <div>
+                <h3 id="activeProjectTitle" class="code-hub__project-title">Akıllı Modüler Fırın Kontrol Sistemi</h3>
+                <p id="activeProjectSummary" class="code-hub__project-summary">ESP32 mikrodenetleyici, MAX31865 RTD PT100 sıcaklık sensörü, PID algoritması, MQTT telemetri yayını ve OLED arayüzü.</p>
+              </div>
+              <div class="code-hub__info-meta mono" id="activeProjectFolder">
+                Dizin: <span>github-projeleri/01-esp32-akilli-firin</span>
+              </div>
+            </div>
+
+            <!-- Kod Alanı -->
+            <div class="code-hub__editor-wrap">
+              <pre class="code-hub__code"><code id="codeDisplayArea" class="mono"></code></pre>
+            </div>
+
+            <!-- GitHub Terminal Yükleme Komutları -->
+            <div class="code-hub__cli-panel">
+              <div class="code-hub__cli-header">
+                <span class="code-hub__cli-title mono">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+                  GitHub'a Yükleme Terminal Komutları (Git CLI)
+                </span>
+                <button type="button" class="code-hub__cli-copy-btn mono" id="copyGitCmdBtn">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  <span id="copyGitCmdText">Komutları Kopyala</span>
+                </button>
+              </div>
+              <pre class="code-hub__cli-code mono" id="gitCommandDisplay"></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MÜHENDİSLİK SÖZLÜĞÜ (KAYDIRMALI) ================= -->
+    <section class="section glossary" id="glossary" aria-labelledby="glossaryTitle">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__tag">Günün Terimi</span>
+          <h2 class="section__title" id="glossaryTitle">Mühendislik <span class="gradient-text">Sözlüğü</span></h2>
+          <p class="section__subtitle">Her sayfada bir mühendislik terimi: günlük dille açıklaması, formülü ve gerçek hayatta ne işe yaradığı. Sağa kaydırarak ilerle.</p>
+        </header>
+
+        <div class="glossary__shell reveal">
+          <div class="glossary__toolbar">
+            <div class="glossary__status">
+              <span class="glossary__counter mono" id="glossaryCounter" aria-live="polite">01 / 13</span>
+              <span class="glossary__date" id="glossaryDate"></span>
+            </div>
+            <div class="glossary__actions">
+              <button type="button" class="glossary__chip" id="glossaryToday">★ Günün Terimi</button>
+              <button type="button" class="glossary__chip" id="glossaryRandom">🎲 Rastgele</button>
+              <button type="button" class="glossary__arrow" id="glossaryPrev" aria-label="Önceki terim">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 18l-6-6 6-6"/></svg>
+              </button>
+              <button type="button" class="glossary__arrow" id="glossaryNext" aria-label="Sonraki terim">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 18l6-6-6-6"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="glossary__viewport" id="glossaryTrack" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Mühendislik terimleri"></div>
+
+          <div class="glossary__dots" id="glossaryDots" role="tablist" aria-label="Terim seçimi"></div>
+          <p class="glossary__hint">← Kaydır, sürükle veya ok tuşlarını kullan →</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERTİFİKALAR & ÖDÜLLER ================= -->
+    <section class="section certificates" id="certificates">
+      <div id="awards" style="position: relative; top: -80px;"></div>
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__tag">Yetkinlik &amp; Başarılar</span>
+          <h2 class="section__title">Sertifikalar &amp; <span class="gradient-text">Ödüller</span></h2>
+          <p class="section__subtitle">Milli Teknoloji Akademisi uzmanlık programı, BTK Akademi belgeleri, profesyonel
+            sertifikasyonlar ve yarışma derecelerim.</p>
+        </header>
+
+        <div class="awards__grid">
+          <article class="award-card reveal">
+            <div class="award-card__top">
+              <span class="award-card__rank award-card__rank--gold">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="8" r="6" />
+                  <path d="M15.5 13.5L17 22l-5-3-5 3 1.5-8.5" />
+                </svg>
+                3.'lük Derecesi
+              </span>
+              <span class="award-card__date mono">13–15 Aralık 2024</span>
+            </div>
+            <h3>Sürdürülebilir Enerji Fikri Maratonu</h3>
+            <p class="award-card__org">GMKA – Güney Marmara Kalkınma Ajansı</p>
+            <p>Ekip olarak geliştirdiğimiz <strong>Stepergy</strong> projesini jüriye sunarak 3.'lük derecesi elde
+              ettik.</p>
+            <a href="assets/sertifikalar/gmka-odul-belgesi.jpg" target="_blank" rel="noopener noreferrer"
+              class="cert-link">
+              Ödül Belgesini Görüntüle
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+              </svg>
+            </a>
+          </article>
+
+          <article class="award-card reveal">
+            <div class="award-card__top">
+              <span class="award-card__rank">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z" />
+                  <path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3" />
+                </svg>
+                Finalist
+              </span>
+            </div>
+            <h3>Yeni Girişimci Yarışması</h3>
+            <p class="award-card__org">Galatasaray Üniversitesi</p>
+            <p>Yaya trafiğinden mekanik enerji hasadı yaparak dış aydınlatma sistemlerini şebekeden bağımsız hale
+              getirmeyi amaçlayan <strong>Stepergy</strong> projemizle finalist olduk.</p>
+          </article>
+
+          <article class="award-card reveal">
+            <div class="award-card__top">
+              <span class="award-card__rank">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                Yarı Finalist
+              </span>
+              <span class="award-card__date mono">20.02.2025</span>
+            </div>
+            <h3>Türkiye–Greece Hackathon 2025</h3>
+            <p class="award-card__org">Bilişim Vadisi</p>
+            <p>Sokak hayvanları mama otomatlarının enerji ihtiyacını dikey jeneratörlerle karşılamayı hedefleyen
+              projemizle uluslararası yarışmada yarı finalist olduk.</p>
+          </article>
+        </div>
+
+        <!-- Sertifikalar Koleksiyonu (19 Belge) -->
+        <div class="certs-section reveal">
+          <div class="certs-section__header">
+            <h3 class="certs-section__title">Tamamlanan Sertifikasyonlar ve Teknik Belgeler</h3>
+            <span class="certs-section__count mono">19 Belge</span>
+          </div>
+
+          <div class="certs__grid">
+            <!-- 1. Milli Teknoloji Akademisi – Otonom Sürüş Teknolojileri (Öne Çıkan) -->
+            <a href="assets/sertifikalar/otonom-sertifika.pdf" target="_blank" rel="noopener noreferrer"
+              class="cert-card cert-card--featured">
+              <div class="cert-card__icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <circle cx="12" cy="12" r="4" />
+                  <path d="M12 2v4M12 18v4M2 12h4M18 12h4" />
+                </svg>
+              </div>
+              <div class="cert-card__body">
+                <h4>Otonom Sürüş Teknolojileri Uzmanlığı</h4>
+                <p class="cert-card__issuer">Milli Teknoloji Akademisi · T3 Vakfı</p>
+                <span class="cert-card__badge cert-card__badge--featured">Uzmanlık Belgesi</span>
+              </div>
+              <span class="cert-card__arrow">↗</span>
+            </a>
+
+            <!-- 2. Makine Öğrenmesi -->
+            <a href="assets/sertifikalar/makine-ogrenmesi.pdf" target="_blank" rel="noopener noreferrer"
+              class="cert-card">
+              <div class="cert-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M12 2a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.5v2.5a2 2 0 0 1-2 2h0a2 2 0 0 1-2-2V9.5C8.8 8.8 8 7.5 8 6a4 4 0 0 1 4-4z" />
+                  <circle cx="12" cy="18" r="3" />
+                  <path d="M12 14v1" />
+                </svg></div>
+              <div class="cert-card__body">
+                <h4>Makine Öğrenmesi</h4>
+                <p class="cert-card__issuer">BTK Akademi</p>
+                <span class="cert-card__badge">Yapay Zekâ</span>
+              </div>
+              <span class="cert-card__arrow">↗</span>
+            </a>
+
+            <!-- 3. Yapay Zekâ ve Algoritmalara Giriş -->
+            <a href="assets/sertifikalar/yapay-zeka-ve-algoritmalara-giris.pdf" target="_blank"
+              rel="noopener noreferrer" class="cert-card">
+              <div class="cert-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+                </svg></div>
+              <div class="cert-card__body">
+                <h4>Yapay Zekâ ve Algoritmalara Giriş</h4>
+                <p class="cert-card__issuer">BTK Akademi</p>
+                <span class="cert-card__badge">Algoritmalar</span>
+              </div>
+              <span class="cert-card__arrow">↗</span>
+            </a>
+
+            <!-- 4. Veri Biliminde Kariyer Yolu -->
+            <a href="assets/sertifikalar/veri-biliminde-kariyer-yolu.pdf" target="_blank" rel="noopener noreferrer"
+              class="cert-card">
+              <div class="cert-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <path d="M21.21 15.89A10 10 0 1 1 8 2.83M22 12A10 10 0 0 0 12 2v10z" />
+                </svg></div>
+              <div class="cert-card__body">
+                <h4>Veri Biliminde Kariyer Yolu</h4>
+                <p class="cert-card__issuer">Sertifika Programı</p>
+                <span class="cert-card__badge">Veri Bilimi</span>
+              </div>
+              <span class="cert-card__arrow">↗</span>
+            </a>
+
+            <!-- 5. Turkcell RPA -->
+            <a href="assets/sertifikalar/turkcell-rpa-otomasyonu.pdf" target="_blank" rel="noopener noreferrer"
+              class="cert-card">
+              <div class="cert-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="11" width="18" height="10" rx="2" />
+                  <circle cx="12" cy="5" r="2" />
+                  <path d="M12 7v4M8 15h.01M16 15h.01" />
+                </svg></div>
+              <div class="cert-card__body">
+                <h4>Robotik Süreç Otomasyonu (RPA)</h4>
+                <p class="cert-card__issuer">Turkcell Geleceği Yazanlar</p>
+                <span class="cert-card__badge">Otomasyon</span>
+              </div>
+              <span class="cert-card__arrow">↗</span>
+            </a>
+
+            <!-- 6. Proteus ile Devre Tasarımı -->
+            <a href="assets/sertifikalar/proteus-ile-devre-tasarimi.pdf" target="_blank" rel="noopener noreferrer"
+              class="cert-card">
+              <div class="cert-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <rect x="5" y="5" width="14" height="14" rx="2" />
+                  <rect x="9" y="9" width="6" height="6" />
+                  <path d="M9 1v4M15 1v4M9 19v4M15 19v4M1 9h4M1 15h4M19 9h4M19 15h4" />
+                </svg></div>
+              <div class="cert-card__body">
+                <h4>Proteus ile Devre Tasarımı</h4>
+                <p class="cert-card__issuer">BTK Akademi</p>
+                <span class="cert-card__badge">Donanım</span>
+              </div>
+              <span class="cert-card__arrow">↗</span>
+            </a>
+
+            <!-- 7. Python ile Siber Güvenlik -->
+            <a href="assets/sertifikalar/python-ile-siber-guvenlik.pdf" target="_blank" rel="noopener noreferrer"
+              class="cert-card">
+              <div class="cert-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg></div>
+              <div class="cert-card__body">
+                <h4>Python ile Siber Güvenlik</h4>
+                <p class="cert-card__issuer">BTK Akademi</p>
+                <span class="cert-card__badge">Güvenlik</span>
+              </div>
+              <span class="cert-card__arrow">↗</span>
+            </a>
+
+            <!-- 8. Web Tabanlı CBS (GIS) -->
+            <a href="assets/sertifikalar/web-tabanli-cbs-gis.pdf" target="_blank" rel="noopener noreferrer"
+              class="cert-card">
+              <div class="cert-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <path
+                    d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                </svg></div>
+              <div class="cert-card__body">
+                <h4>Web Tabanlı Coğrafi Bilgi Sistemleri</h4>
+                <p class="cert-card__issuer">CBS / GIS Sertifikası</p>
+                <span class="cert-card__badge">GIS &amp; Harita</span>
+              </div>
+              <span class="cert-card__arrow">↗</span>
+            </a>
+
+            <!-- 9. Web Sitesi Kullanılabilirliği -->
+            <a href="assets/sertifikalar/web-sitesi-kullanilabilirligi.pdf" target="_blank" rel="noopener noreferrer"
+              class="cert-card">
+              <div class="cert-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
+                </svg></div>
+              <div class="cert-card__body">
+                <h4>Web Sitesi Kullanılabilirliği</h4>
+                <p class="cert-card__issuer">UI/UX Sertifika Programı</p>
+                <span class="cert-card__badge">UI / UX</span>
+              </div>
+              <span class="cert-card__arrow">↗</span>
+            </a>
+
+            <!-- 10. A2 Seviye İngilizce -->
+            <a href="assets/sertifikalar/a2-seviye-ingilizce.pdf" target="_blank" rel="noopener noreferrer"
+              class="cert-card">
+              <div class="cert-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 7H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                </svg></div>
+              <div class="cert-card__body">
+                <h4>A2 Seviye İngilizce</h4>
+                <p class="cert-card__issuer">BTK Akademi</p>
+                <span class="cert-card__badge">Dil</span>
+              </div>
+              <span class="cert-card__arrow">↗</span>
+            </a>
+
+            <!-- 11. A1 Seviye İngilizce -->
+            <a href="assets/sertifikalar/a1-seviye-ingilizce.pdf" target="_blank" rel="noopener noreferrer"
+              class="cert-card">
+              <div class="cert-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 7H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                </svg></div>
+              <div class="cert-card__body">
+                <h4>Başlangıç Seviye İngilizce (A1)</h4>
+                <p class="cert-card__issuer">BTK Akademi</p>
+                <span class="cert-card__badge">Dil</span>
+              </div>
+              <span class="cert-card__arrow">↗</span>
+            </a>
+
+            <!-- 12. Topluluk Önünde Konuşma ve Sunum -->
+            <a href="assets/sertifikalar/etkili-sunum-teknikleri.pdf" target="_blank" rel="noopener noreferrer"
+              class="cert-card">
+              <div class="cert-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8" />
+                </svg></div>
+              <div class="cert-card__body">
+                <h4>Topluluk Önünde Konuşma &amp; Sunum</h4>
+                <p class="cert-card__issuer">İletişim &amp; Liderlik</p>
+                <span class="cert-card__badge">Soft Skill</span>
+              </div>
+              <span class="cert-card__arrow">↗</span>
+            </a>
+
+            <!-- 13. Etkili İletişim Stratejileri -->
+            <a href="assets/sertifikalar/etkili-iletisim-stratejileri.pdf" target="_blank" rel="noopener noreferrer"
+              class="cert-card">
+              <div class="cert-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                </svg></div>
+              <div class="cert-card__body">
+                <h4>Etkili İletişim Stratejileri</h4>
+                <p class="cert-card__issuer">Profesyonel Gelişim</p>
+                <span class="cert-card__badge">İletişim</span>
+              </div>
+              <span class="cert-card__arrow">↗</span>
+            </a>
+
+            <!-- 14. Kariyeri Tehdit Eden Yaklaşımlar -->
+            <a href="assets/sertifikalar/kariyeri-tehdit-eden-yaklasimlar.pdf" target="_blank" rel="noopener noreferrer"
+              class="cert-card">
+              <div class="cert-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                  <polyline points="2 17 12 22 22 17" />
+                  <polyline points="2 12 12 17 22 12" />
+                </svg></div>
+              <div class="cert-card__body">
+                <h4>Kariyeri Tehdit Eden Yaklaşımlar</h4>
+                <p class="cert-card__issuer">Kariyer Yönetimi</p>
+                <span class="cert-card__badge">Kariyer</span>
+              </div>
+              <span class="cert-card__arrow">↗</span>
+            </a>
+
+            <!-- 15. Borsa ve Teknik Analiz -->
+            <a href="assets/sertifikalar/borsa-ve-teknik-analiz.pdf" target="_blank" rel="noopener noreferrer"
+              class="cert-card">
+              <div class="cert-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="20" x2="18" y2="10" />
+                  <line x1="12" y1="20" x2="12" y2="4" />
+                  <line x1="6" y1="20" x2="6" y2="14" />
+                </svg></div>
+              <div class="cert-card__body">
+                <h4>Borsa ve Teknik Analiz</h4>
+                <p class="cert-card__issuer">Finansal Okuryazarlık</p>
+                <span class="cert-card__badge">Finans</span>
+              </div>
+              <span class="cert-card__arrow">↗</span>
+            </a>
+
+            <!-- 16. E-Ticarete Giriş -->
+            <a href="assets/sertifikalar/e-ticarete-giris.pdf" target="_blank" rel="noopener noreferrer"
+              class="cert-card">
+              <div class="cert-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <circle cx="9" cy="21" r="1" />
+                  <circle cx="20" cy="21" r="1" />
+                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                </svg></div>
+              <div class="cert-card__body">
+                <h4>E-Ticarete Giriş</h4>
+                <p class="cert-card__issuer">Dijital Ticaret</p>
+                <span class="cert-card__badge">E-Ticaret</span>
+              </div>
+              <span class="cert-card__arrow">↗</span>
+            </a>
+
+            <!-- 17. Oyun Pazarlama Temelleri -->
+            <a href="assets/sertifikalar/oyun-pazarlama-temelleri.pdf" target="_blank" rel="noopener noreferrer"
+              class="cert-card">
+              <div class="cert-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="6" width="20" height="12" rx="2" />
+                  <path d="M6 12h4M8 10v4M15 13h.01M18 11h.01" />
+                </svg></div>
+              <div class="cert-card__body">
+                <h4>Oyun Pazarlama Temelleri</h4>
+                <p class="cert-card__issuer">Oyun Geliştirme &amp; Pazarlama</p>
+                <span class="cert-card__badge">Oyun</span>
+              </div>
+              <span class="cert-card__arrow">↗</span>
+            </a>
+
+            <!-- 18. Bandırma Onyedi Eylül Üniversitesi Başarı Belgesi -->
+            <a href="assets/sertifikalar/bandirma-onyedi-eylul-universitesi.pdf" target="_blank"
+              rel="noopener noreferrer" class="cert-card">
+              <div class="cert-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <path d="M22 10L12 5 2 10l10 5 10-5z" />
+                  <path d="M6 12v5c3 2 9 2 12 0v-5" />
+                </svg></div>
+              <div class="cert-card__body">
+                <h4>Akademik Başarı &amp; Yetkinlik</h4>
+                <p class="cert-card__issuer">Bandırma Onyedi Eylül Üniversitesi</p>
+                <span class="cert-card__badge">Akademik</span>
+              </div>
+              <span class="cert-card__arrow">↗</span>
+            </a>
+
+            <!-- 19. GMKA Sürdürülebilir Enerji Ödül Belgesi -->
+            <a href="assets/sertifikalar/gmka-odul-belgesi.jpg" target="_blank" rel="noopener noreferrer"
+              class="cert-card cert-card--featured">
+              <div class="cert-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="8" r="6" />
+                  <path d="M15.5 13.5L17 22l-5-3-5 3 1.5-8.5" />
+                </svg></div>
+              <div class="cert-card__body">
+                <h4>GMKA 3.'lük Ödül &amp; Başarı Belgesi</h4>
+                <p class="cert-card__issuer">Güney Marmara Kalkınma Ajansı</p>
+                <span class="cert-card__badge cert-card__badge--featured">Derece Belgesi</span>
+              </div>
+              <span class="cert-card__arrow">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= İLETİŞİM ================= -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__tag">İletişim</span>
+          <h2 class="section__title">İletişime <span class="gradient-text">Geçin</span></h2>
+          <p class="section__subtitle">Proje fikirleri, akademik iş birlikleri veya profesyonel sorularınız için
+            doğrudan bana ulaşabilirsiniz.</p>
+        </header>
+
+        <div class="contact__grid">
+          <!-- Sol: bilgiler + QR -->
+          <aside class="contact__info reveal">
+            <a href="https://github.com/BERKAY081014" target="_blank" rel="noopener noreferrer" class="info-card"
+              id="contactGithubCard">
+              <span class="info-card__icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg>
+              </span>
+              <span>
+                <span class="info-card__label">GitHub</span>
+                <span class="info-card__value">BERKAY081014</span>
+              </span>
+            </a>
+            <a href="https://www.linkedin.com/in/berkay-bilgin-bb7b05281/" target="_blank" rel="noopener noreferrer"
+              class="info-card" id="contactLinkedinCard">
+              <span class="info-card__icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path
+                    d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.850 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+                </svg>
+              </span>
+              <span>
+                <span class="info-card__label">LinkedIn</span>
+                <span class="info-card__value">berkay-bilgin-bb7b05281</span>
+              </span>
+            </a>
+            <a href="mailto:kgberkay10@gmail.com" class="info-card" id="contactMailCard">
+              <span class="info-card__icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="M22 6l-10 7L2 6" />
+                </svg>
+              </span>
+              <span>
+                <span class="info-card__label">E-posta</span>
+                <span class="info-card__value">kgberkay10@gmail.com</span>
+              </span>
+            </a>
+            <div class="info-card">
+              <span class="info-card__icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </span>
+              <span>
+                <span class="info-card__label">Konum</span>
+                <span class="info-card__value">Sakarya, Türkiye</span>
+              </span>
+            </div>
+
+            <!-- Instagram QR kod alanı -->
+            <div class="qr-card">
+              <div class="qr-card__frame">
+                <img src="assets/img/instagram-qr.jpg" alt="Instagram QR kodu – @berkyblgn" class="qr-card__img"
+                  id="qrImage" loading="lazy" />
+                <div class="qr-card__fallback" id="qrFallback">
+                  <svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <rect x="3" y="3" width="7" height="7" rx="1" />
+                    <rect x="14" y="3" width="7" height="7" rx="1" />
+                    <rect x="3" y="14" width="7" height="7" rx="1" />
+                    <path d="M14 14h3v3h-3zM18 18h3v3h-3zM14 19h2M19 14h2" />
+                  </svg>
+                  <span>QR kod</span>
+                </div>
+              </div>
+              <div class="qr-card__text">
+                <h3>Instagram'dan Bağlantı Kur</h3>
+                <p>Kameranızla QR kodu okutabilir veya doğrudan profilime geçebilirsiniz:</p>
+                <a href="https://www.instagram.com/berkyblgn?utm_source=qr&amp;stkn=eXBpbHNrY2lreW54" target="_blank"
+                  rel="noopener noreferrer" id="qrInstagramLink">@berkyblgn ↗</a>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Sağ: form -->
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <!-- Spam koruması (bot tuzağı) -->
+            <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder=" " required minlength="2" autocomplete="name" />
+              <label for="name">Ad Soyad</label>
+              <span class="form-error" data-for="name"></span>
+            </div>
+
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder=" " required autocomplete="email" />
+              <label for="email">E-posta</label>
+              <span class="form-error" data-for="email"></span>
+            </div>
+
+            <div class="form-group">
+              <textarea id="message" name="message" rows="6" placeholder=" " required minlength="10"></textarea>
+              <label for="message">Mesajınız</label>
+              <span class="form-error" data-for="message"></span>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+              <span class="btn__text">Mesajı Gönder</span>
+              <span class="btn__loader" aria-hidden="true"></span>
+              <svg class="btn__icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+              </svg>
+            </button>
+
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#hero" class="logo" id="footerLogo" aria-label="Ana sayfa">
+        <span class="logo__name">Berkay Bilgin</span>
+        <span class="logo__tag mono">Müh.</span>
+      </a>
+
+      <div class="footer__socials">
+        <a href="https://github.com/BERKAY081014" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+          class="social-btn" id="footerGithub">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/berkay-bilgin-bb7b05281/" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn" class="social-btn" id="footerLinkedin">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path
+              d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/berkyblgn?utm_source=qr&amp;stkn=eXBpbHNrY2lreW54" target="_blank"
+          rel="noopener noreferrer" aria-label="Instagram" class="social-btn" id="footerInstagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="5" />
+            <circle cx="12" cy="12" r="4.2" />
+            <circle cx="17.6" cy="6.4" r="1" fill="currentColor" stroke="none" />
+          </svg>
+        </a>
+        <a href="mailto:kgberkay10@gmail.com" aria-label="E-posta" class="social-btn" id="footerMail">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="M22 6l-10 7L2 6" />
+          </svg>
+        </a>
+      </div>
+
+      <p class="footer__copy">© <span id="year"></span> Berkay Bilgin. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <!-- Yukarı çık butonu -->
+  <a href="#hero" class="back-to-top" id="backToTop" aria-label="Yukarı çık">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4">
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </svg>
+  </a>
+
+  <script src="js/project-codes.js" defer></script>
+  <script src="js/engineering-terms.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>
