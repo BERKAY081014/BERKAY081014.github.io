@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://berkaybilgin.tr/sitemap.xml
