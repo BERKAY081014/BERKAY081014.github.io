@@ -1,0 +1,8 @@
+{
+  "term": "Boost (Yükseltici) Dönüştürücü",
+  "category": "Güç Elektroniği",
+  "en": "Boost Converter (Step-Up)",
+  "formula": "V_out = V_in / (1 - D)",
+  "updated_at_utc": "2026-10-05 12:00:00 UTC",
+  "day_of_year": 278
+}
